@@ -13,9 +13,16 @@ Welcome to WeatherWise, your go-to weather web application for up-to-date weathe
 
 To get started with WeatherWise, follow these simple steps:
 
-1. Clone the repository and visit `localhost:3000`.
-2. Enter the name of the city for which you want to check the weather.
-3. View the detailed weather information, including temperature, humidity, wind speed, and more.
+1. Clone the repository.
+2. Open the terminal and run the following commands :- 
+   
+```
+npm i
+node app.js
+```
+3. Now open your browser and visit `localhost:3000`
+4. Enter the name of the city for which you want to check the weather.
+5. View the detailed weather information, including temperature, humidity, wind speed, and more.
 
 
 ## Usage
@@ -51,3 +58,9 @@ If you'd like to contribute to WeatherWise, please follow these steps:
 ## Issues and Support
 
 For any issues or inquiries, please [open an issue](https://github.com/Sarita-021/WeatherWeb/issues).
+
+<img width="800" alt="weatherweb" src="https://github.com/Sarita-021/WeatherWeb/assets/121181405/845b6801-7350-4cb3-9f83-9e80b10f316f">
+
+
+<img width="800" alt="weatherweb2" src="https://github.com/Sarita-021/WeatherWeb/assets/121181405/c6934e59-61c4-42b3-a6b9-87e55e5ef37c">
+
