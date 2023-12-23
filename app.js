@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
 const date = require(__dirname + "/date.js");
+const apikey = require(__dirname + "/doc.js");
 
 const app = express();
 
@@ -31,7 +32,7 @@ app.get("/result", function(req, res){
 
 app.post("/", function(req, res){
     const city = req.body.cityName;
-    const url = "https://api.weatherapi.com/v1/current.json?q="+city+"&key="+ APIKEY
+    const url = "https://api.weatherapi.com/v1/current.json?q="+city+"&key="+apikey
 
     https.get(url, (response) => {
         console.log(response.statusCode);
