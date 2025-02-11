@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 * {
     box-sizing: border-box;
   }
-  
   body {
-    font-family: 'montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-image: url("/images/bgimage.jpg");
     background-size: cover;
     background-position: top center;
@@ -12,17 +12,17 @@
 .container {
     position: relative;
     top:40px;
-    max-width: 1000px;
+    max-width: 80vw;
     margin: 50px auto;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5rem 10rem;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     text-align: center;
 }
 
 h1, h2 {
-    color: black;
+    color: #c16335;
 }
 
 ul {
@@ -78,3 +78,35 @@ ul li {
     border-radius: 10px;
     transition: background 0.3s ease-in-out;
   }
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in Animation */
+.slide-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
