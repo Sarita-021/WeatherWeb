@@ -21,6 +21,10 @@ app.get("/", function (req, res) {
 
 });
 
+app.get("/aboutus", (req, res)=>{
+    res.render("aboutus");
+});
+
 app.get("/result", function (req, res) {
     const day = date.getDate();
 
