@@ -1,80 +1,82 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 4rem;
 }
 
 /* Navbar Styling */
 .navbar {
-    height: 60px;
-    width: 100%;
-    color: #fefefe; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  height: 60px;
+  width: 100%;
+  color: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 /* Logo Styling */
 .nav_logo {
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Navigation Links */
 .nav_links {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .nav_item {
-    cursor: pointer;
-    transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .nav_item:hover {
-    color: #c16335;
+  color: #c16335;
 }
 
 .theme_toggle {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-.dark_mode, .light_mode {
-    padding: 5px 10px;
-    background-color: white;
-    color: black;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
+.dark_mode,
+.light_mode {
+  padding: 5px 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.dark_mode:hover, .light_mode:hover {
-    background-color: #c16335;
-    color: white;
+.dark_mode:hover,
+.light_mode:hover {
+  background-color: #c16335;
+  color: white;
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-    
-    .nav_links {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
 
-    .theme_toggle {
-        margin-top: 10px;
-    }
+  .nav_links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .theme_toggle {
+    margin-top: 10px;
+  }
 }

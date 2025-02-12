@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,14 +16,17 @@ body{
   background-position: top center;
 }
 
-.wrapper{
+.wrapper {
   width: 400px;
   background: #efefef;
   border-radius: 7px;
   box-shadow: 10px 10px 20px #432c2a;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 
-.wrapper header{
+.wrapper header {
   display: flex;
   font-size: 21px;
   font-weight: 500;
@@ -36,7 +39,7 @@ header h3 {
   margin-left: 9px;
 }
 
-.wrapper .input-part{
+.wrapper .input-part {
   margin: 55px 25px 30px;
 }
 
@@ -44,7 +47,7 @@ header h3 {
   display: block;
 }
 
-.input-part :where(input, button){
+.input-part :where(input, button) {
   width: 100%;
   height: 55px;
   border: none;
@@ -53,21 +56,21 @@ header h3 {
   border-radius: 7px;
 }
 
-.input-part input{
+.input-part input {
   text-align: center;
   padding: 0 15px;
   border: 1px solid #c16335;
 }
 
-.input-part input:is(:focus, :valid){
+.input-part input:is(:focus, :valid) {
   border: 2px solid #c16335;
 }
 
-.input-part input::placeholder{
+.input-part input::placeholder {
   color: #9b9a9a;
 }
 
-.input-part .separator{
+.input-part .separator {
   width: 100%;
   margin: 10px 0;
   background: #111111;
@@ -77,18 +80,18 @@ header h3 {
   justify-content: center;
 }
 
-.input-part button{
+.input-part button {
   color: #fff;
   cursor: pointer;
   background: #c16335;
   transition: 0.3s ease;
 }
 
-.input-part button:hover{
+.input-part button:hover {
   background: #ab562b;
 }
 
-.wrapper .weather-part{
+.wrapper .weather-part {
   display: none;
   margin: 30px 0 0;
   align-items: center;
