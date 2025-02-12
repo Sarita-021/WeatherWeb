@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="/css/search.css">
+    <link rel="stylesheet" href="/css/search.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="/css/navbar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Linking BoxIcon for Icon -->
     <!-- <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'> -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-</head>
-<body>
-
-<!-- Navbar -->
-<header>
-    <div class="navbar">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking BoxIcon for Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="navbar">
         <div class="nav_logo">
-            <i class="fa-solid fa-cloud"></i> Weather Wise
+          <i class="fa-solid fa-cloud"></i> Weather Wise
         </div>
 
         <nav class="nav_links">
@@ -30,25 +41,56 @@
         </nav>
 
         <div class="theme_toggle">
-            <button class="dark_mode">Dark Mode</button>
-            <button class="light_mode">Light Mode</button>
+          <button class="dark_mode">Dark Mode</button>
+          <button class="light_mode">Light Mode</button>
         </div>
-    </div>
-</header>
-
+      </div>
+    </header>
 
     <div class="wrapper">
-        <header><h3> Weather App</h3></header>
-        <section class="input-part">
-            <div class="content">
-                <form action="/" method="post" >
-                    <input type="text" placeholder="Enter city name" name="cityName" required>
-                    <div class="separator"></div>
-                    <button type="submit">Check Weather</button>
-                </form>
-            </div>
-        </section>
+      <header>
+        <h3>Weather App</h3>
+      </header>
+
+      <section class="input-part">
+        <div class="content">
+          <form action="/" method="post">
+            <input
+              type="text"
+              placeholder="Enter city name"
+              name="cityName"
+              required
+            />
+            <div class="separator"></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="forecast-options">
+        <button class="option-btn" id="currentWeather">Today</button>
+        <button class="option-btn" id="nextWeather">Tomorrow</button>
+        <button class="option-btn" id="threeDayForecast">Next 3 Days</button>
+        <button class="option-btn" id="sevenDayReport">Last 7 Days</button>
+      </section>
+      <div id="weatherDetails"></div>
     </div>
+    <div class="wrapper">
+      <section class="featured-cities">
+        <div id="majorCitiesWeather">
+          <div id="newdelhiWeather"></div>
+          <div id="mumbaiWeather"></div>
+          <div id="hyderabadWeather"></div>
+          <div id="chennaiWeather"></div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <section class="aqi-checker">
+    <h3>Air Quality Index (AQI)</h3>
+    <p id="aqiResult">Enter a city to check AQI levels.</p>
+  </section>
+
+
 
 <footer>
     <h2>WeatherWeb</h2>
@@ -65,4 +107,5 @@
     <p class = "copyright">Copyright © 2025</p>
 </footer>
 </body>
+<script src="script.js"></script>
 </html>
