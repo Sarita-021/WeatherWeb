@@ -8,6 +8,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -24,6 +25,7 @@ body {
   margin: auto;
   margin-bottom: 30px;
   padding: 20px;
+  margin-top: 40px;
 }
 
 .wrapper header {
@@ -101,4 +103,41 @@ header h3 {
 
 .wrapper.active {
   display: flex;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #c16335;
+  color: white;
+  width: 100%;
+  /* margin-top: auto; */
+  margin: 20px;
+}
+
+footer h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.social-links {
+  margin: 15px 0;
+}
+
+.social-links a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ab562b;
+}
+
+footer .copyright {
+  font-size: 14px;
+  opacity: 0.8;
 }

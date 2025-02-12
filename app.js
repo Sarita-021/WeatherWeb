@@ -19,6 +19,10 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
+app.get("/aboutus", (req, res)=>{
+    res.render("aboutus");
+});
+
 app.get("/result", function (req, res) {
   const day = date.getDate();
 
