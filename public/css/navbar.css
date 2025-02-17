@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 4rem;
+  padding: 60px;
 }
 
 /* Navbar Styling */
@@ -16,6 +16,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
+  background-color: #333;
 }
 
 /* Logo Styling */
