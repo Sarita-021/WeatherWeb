@@ -23,6 +23,10 @@ app.get("/aboutus", (req, res)=>{
     res.render("aboutus");
 });
 
+app.get("/tempConverter", (req, res)=>{
+  res.render("tempConverter");
+});
+
 app.get("/result", function (req, res) {
   const day = date.getDate();
 
