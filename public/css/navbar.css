@@ -1,13 +1,17 @@
+/* Reset & Global Styles */
 body {
   margin: 0;
-  padding: 60px;
+  padding-top: 60px; /* Prevents content from hiding under navbar */
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Navbar Styling */
 .navbar {
   height: 60px;
   width: 100%;
-  color: #fefefe;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,12 +20,14 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: #333;
+  background: rgba(51, 51, 51, 0.9);
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease-in-out;
 }
 
 /* Logo Styling */
 .nav_logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -29,64 +35,83 @@ body {
 }
 
 /* Navigation Links */
-a {
-  text-decoration: none;
-  color: #fefefe;
-}
-
-a:hover {
-  color: #c16335;
-}
-
 .nav_links {
   display: flex;
   gap: 20px;
 }
 
 .nav_item {
-  cursor: pointer;
-  transition: 0.3s;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav_item:hover {
-  color: #c16335;
+  color: #ff9800;
+  transform: scale(1.1);
 }
 
+/* Theme Toggle */
 .theme_toggle {
   display: flex;
   gap: 10px;
 }
 
-.dark_mode,
-.light_mode {
-  padding: 5px 10px;
-  background-color: white;
-  color: black;
+.theme_toggle button {
+  padding: 8px 14px;
   border: none;
+  font-size: 14px;
   cursor: pointer;
-  transition: 0.3s;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.dark_mode {
+  background: #000;
+  color: #fff;
+}
+
+.light_mode {
+  background: #fff;
+  color: #000;
 }
 
 .dark_mode:hover,
 .light_mode:hover {
-  background-color: #c16335;
+  background: #ff9800;
   color: white;
 }
 
+/* Hamburger Menu for Mobile */
+.menu_icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     height: auto;
-    padding: 10px;
+    padding: 15px;
   }
 
   .nav_links {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
+    display: none; /* Hidden by default */
   }
 
-  .theme_toggle {
-    margin-top: 10px;
+  .nav_links.active {
+    display: flex;
+  }
+
+  .menu_icon {
+    display: block;
   }
 }

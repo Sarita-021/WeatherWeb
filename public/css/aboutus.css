@@ -1,62 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-image: url("/images/bgimage.jpg");
-    background-size: cover;
-    background-position: top center;
-  }
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Container */
 .container {
     position: relative;
-    top:40px;
     max-width: 80vw;
-    margin: 50px auto;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5rem 10rem;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 4rem 8rem;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
     text-align: center;
+    color: white;
+    transition: 0.3s ease-in-out;
 }
 
+/* Heading Styles */
 h1, h2 {
-    color: #c16335;
+    color: #ffcc70;
+    margin-bottom: 15px;
 }
 
+/* List & Paragraph Styles */
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    color: white;
 }
 
-p{
+ul li, p {
     color: white;
-}
-
-ul li {
-    margin: 10px 0;
     font-size: 18px;
+    margin: 8px 0;
 }
 
+/* Contact Text */
 .contact {
     font-weight: bold;
-    color: #c16335;
+    color: #ffcc70;
 }
 
-@media (max-width: 600px) {
+/* Responsive Design */
+@media (max-width: 768px) {
     .container {
         width: 90%;
-        padding: 15px;
+        padding: 2rem;
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     ul li {
@@ -64,21 +75,27 @@ ul li {
     }
 }
 
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: white;
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #c16335;
-    border-radius: 10px;
-    transition: background 0.3s ease-in-out;
-  }
+    width: 8px;
+}
 
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffcc70;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff5733;
+}
+
+/* Fade-in Animation */
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards;
