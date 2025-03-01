@@ -1,154 +1,197 @@
+/* General Styling */
 body {
-  font-family: Arial, sans-serif;
-  /* background: #f4f4f4; */
-  /* text-align: center; */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  color: #ffffff;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+/* Weather App Wrapper */
 .wrapper {
-  max-width: 500px;
-  margin: auto;
-
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin-bottom: 30px; /* Push it away from the next section */
+  max-width: 600px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
 }
 
 header h3 {
   margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
+/* Buttons */
 button {
-  padding: 10px 20px;
+  padding: 12px 20px;
   border: none;
-  background: #007bff;
+  background: #ff9800;
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background: #0056b3;
+  background: #e68900;
+  transform: scale(1.05);
 }
 
+/* Forecast Buttons */
 .forecast-options {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 15px;
+  gap: 10px;
 }
 
 .option-btn {
   flex: 1;
-  margin: 5px;
-  padding: 10px;
-  background: #c16335;
+  padding: 12px;
+  background: #ff5733;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   transition: background 0.3s ease;
+  font-weight: 600;
+  max-width: 120px;
 }
 
 .option-btn:hover {
-  background: #218838;
+  background: #c70039;
 }
 
+/* Weather Details */
 #weatherDetails {
-  color: #c16335;
+  color: #ffeb3b;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
+/* Featured Cities & AQI Section */
 .weather-result,
 .featured-cities,
 .aqi-checker {
   width: 100%;
-  max-width: 800px; /* Consistent width */
+  max-width: 800px;
   margin-top: 20px;
-  padding: 15px;
-  background: #e9ecef;
-  border-radius: 5px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.featured-cities ul {
-  list-style: none;
-  padding: 0;
-}
-
-.featured-cities li {
-  margin: 5px 0;
-}
-
-/* Additional Styling for Featured Cities & AQI */
-.featured-cities {
+/* City Weather Cards */
+#majorCitiesWeather {
   display: flex;
-  flex-direction: column-reverse;
-  gap: 20px;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+}
+
+#majorCitiesWeather div {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 20px;
+  font-weight: bold;
+  min-width: 140px;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* styling for diff cities */
-#newdelhiWeather p img {
-  margin-right: 50px;
+#majorCitiesWeather div:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
 }
 
-#mumbaiWeather p img {
-  margin-right: 50px;
-}
-#hyderabadWeather p img {
-  margin-right: 40px;
-}
-#chennaiWeather p img {
-  margin-right: 50px;
-}
-
+/* AQI Checker */
 .aqi-checker {
-  color: #c16335;
-  width: 80%;
+  color: #ffeb3b;
+  width: 90%;
   max-width: 600px;
-  background: #efefef;
+  background: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .aqi-checker h3 {
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-}
-#majorCitiesWeather {
-  color: #c16335;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px;
-  /* background: #f8f9fa; */
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
-}
-
-#majorCitiesWeather div {
-  background: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
   text-align: center;
-  font-weight: bold;
-  min-width: 120px;
 }
 
-@media (max-width: 600px) {
+footer h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.social-links a {
+  margin: 5px;
+  color: #ffeb3b;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .forecast-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option-btn {
+    width: 100%;
+    max-width: none;
+  }
+
   #majorCitiesWeather {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  .option-btn {
+    padding: 10px;
   }
 }

@@ -1,0 +1,169 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Body and Layout */
+body {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    border-bottom: 2px solid #fff;
+}
+
+.nav_logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav_links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav_item {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav_item a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav_item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Theme Toggle */
+.theme_toggle button {
+    padding: 8px 12px;
+    margin-left: 5px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+    color: black;
+    border-radius: 5px;
+}
+
+.theme_toggle button:hover {
+    background: black;
+    color: white;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    flex-grow: 1; /* Allows it to expand */
+}
+
+/* Form Styling */
+.input-part {
+    padding: 20px;
+    height: 200px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-part input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Forecast Buttons */
+.forecast-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.option-btn {
+    background: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.option-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* AQI Section */
+.aqi-checker {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Featured Cities */
+#majorCitiesWeather {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+#majorCitiesWeather div {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin-top: auto; /* Ensures it sticks to the bottom */
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* Copyright */
+.copyright {
+    margin-top: 10px;
+}

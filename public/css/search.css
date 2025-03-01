@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,138 +7,155 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Body Styling */
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("/images/bgimage.jpg");
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   background-size: cover;
-  background-position: top center;
-}
-
-.wrapper {
-  width: 400px;
-  background: #efefef;
-  border-radius: 7px;
-  box-shadow: 10px 10px 20px #432c2a;
-  margin: auto;
-  margin-bottom: 30px;
+  background-position: center;
   padding: 20px;
-  margin-top: 40px;
 }
 
+/* Weather App Wrapper */
+.wrapper {
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+/* Header */
 .wrapper header {
   display: flex;
-  font-size: 21px;
-  font-weight: 500;
-  color: #c16335;
-  padding: 16px 15px;
+  justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #c16335;
-}
-header h3 {
-  margin-left: 9px;
-}
-
-.wrapper .input-part {
-  margin: 55px 25px 30px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffcc70;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ffcc70;
 }
 
+/* Input Section */
 .input-part {
-  display: block;
-}
-
-.input-part :where(input, button) {
-  width: 100%;
-  height: 55px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  border-radius: 7px;
+  margin: 40px 0;
 }
 
 .input-part input {
-  text-align: center;
-  padding: 0 15px;
-  border: 1px solid #c16335;
-}
-
-.input-part input:is(:focus, :valid) {
-  border: 2px solid #c16335;
-}
-
-.input-part input::placeholder {
-  color: #9b9a9a;
-}
-
-.input-part .separator {
   width: 100%;
-  margin: 10px 0;
-  background: #111111;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.input-part button {
-  color: #fff;
-  cursor: pointer;
-  background: #c16335;
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ffcc70;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
   transition: 0.3s ease;
 }
 
-.input-part button:hover {
-  background: #ab562b;
+.input-part input::placeholder {
+  color: #ddd;
 }
 
-.wrapper .weather-part {
+.input-part input:focus {
+  border-color: #ff5733;
+}
+
+/* Button Styling */
+.input-part button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  background: #ffcc70;
+  color: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.input-part button:hover {
+  background: #ff5733;
+  color: white;
+}
+
+/* Weather Information */
+.weather-part {
   display: none;
-  margin: 30px 0 0;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .wrapper.active {
   display: flex;
+  flex-direction: column;
 }
 
-/* footer */
+/* Footer */
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #c16335;
-  color: white;
   width: 100%;
-  /* margin-top: auto; */
-  margin: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
 footer h2 {
-  font-size: 24px;
-  margin-bottom: 5px;
+  font-size: 22px;
 }
 
 .social-links {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 .social-links a {
-  color: white;
   font-size: 24px;
   margin: 0 10px;
-  text-decoration: none;
-  transition: 0.2s ease;
+  color: white;
+  transition: 0.3s ease-in-out;
 }
 
 .social-links a:hover {
-  color: #ab562b;
+  color: #ffcc70;
 }
 
 footer .copyright {
   font-size: 14px;
   opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .wrapper {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .input-part input {
+    font-size: 16px;
+  }
+
+  .input-part button {
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
