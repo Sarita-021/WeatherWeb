@@ -43,7 +43,7 @@ node app.js
 WeatherWise is built using modern web technologies:
 
 - Frontend: HTML5, CSS3, JavaScript
-- Weather API: 
+- Weather API:  https://www.weatherapi.com/
 
 ## Contributing
 
