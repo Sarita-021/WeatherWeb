@@ -19,9 +19,9 @@ body {
 
 .wrapper {
   width: 400px;
-  background: #efefef;
+  background: #270897;
   border-radius: 7px;
-  box-shadow: 10px 10px 20px #432c2a;
+  box-shadow: 10px 10px 20px #b10489;
   margin: auto;
   margin-bottom: 30px;
   padding: 20px;
@@ -83,9 +83,9 @@ header h3 {
 }
 
 .input-part button {
-  color: #fff;
+  color: #cf0f0f;
   cursor: pointer;
-  background: #c16335;
+  background: #f7ebe4;
   transition: 0.3s ease;
 }
 
@@ -109,7 +109,7 @@ header h3 {
 footer {
   text-align: center;
   padding: 20px;
-  background: #c16335;
+  background: #09264e;
   color: white;
   width: 100%;
   /* margin-top: auto; */
@@ -126,7 +126,7 @@ footer h2 {
 }
 
 .social-links a {
-  color: white;
+  color: rgb(212, 25, 25);
   font-size: 24px;
   margin: 0 10px;
   text-decoration: none;
